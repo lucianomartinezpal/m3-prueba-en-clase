@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIWI Viajes - Memotest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pantalla de Bienvenida -->
+    <section id="welcome-screen" class="screen active">
+        <div class="container">
+            <img src="assets/logo.png" alt="KIWI Viajes Logo" class="logo">
+            <h1>Memotest KIWI Viajes</h1>
+            <p class="instructions">
+                ¡Bienvenido al Memotest de KIWI Viajes!<br>
+                Encuentra 4 parejas de destinos europeos en 10 oportunidades para ganar un 10% de descuento en tu próximo paquete premium.
+            </p>
+            <button id="start-game" class="btn">¡Comenzar Juego!</button>
+        </div>
+    </section>
+
+    <!-- Pantalla del Juego -->
+    <section id="game-screen" class="screen">
+        <div class="container">
+            <div class="game-header">
+                <h2>Memotest KIWI Viajes</h2>
+                <div class="game-stats">
+                    <span id="moves">Movimientos: 0</span>
+                    <span id="pairs">Parejas: 0/8</span>
+                    <span id="opportunities">Oportunidades: 10</span>
+                </div>
+            </div>
+            <div id="game-board" class="game-board">
+                <!-- Las cartas se generarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Pantalla de Resultado -->
+    <section id="result-screen" class="screen">
+        <div class="container">
+            <h2>¡Felicitaciones!</h2>
+            <p>Has completado el Memotest de KIWI Viajes</p>
+            <div class="result-stats">
+                <p>Movimientos totales: <span id="total-moves">0</span></p>
+                <p>Tiempo: <span id="total-time">0:00</span></p>
+            </div>
+            <div class="discount-message">
+                <h3>¡Has ganado un 10% de descuento!</h3>
+                <p>Válido para cualquier paquete premium de KIWI Viajes</p>
+                <p class="code">Código: KIWI10</p>
+            </div>
+            <button id="play-again" class="btn">Jugar de nuevo</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
