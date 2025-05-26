@@ -25,7 +25,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -43,19 +43,19 @@ body {
 
 /* Pantalla de Bienvenida */
 .logo {
-    max-width: 200px;
-    margin-bottom: 2rem;
+    max-width: 150px;
+    margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
 .instructions {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -66,8 +66,8 @@ h1 {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -79,28 +79,35 @@ h1 {
 
 /* Pantalla del Juego */
 .game-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.game-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .game-stats {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin: 1rem 0;
-    font-size: 1.2rem;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
 }
 
 .game-board {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
     max-width: 800px;
     margin: 0 auto;
+    padding: 0.5rem;
 }
 
 /* Estilos de las cartas */
 .card {
-    aspect-ratio: 3/4;
+    aspect-ratio: 2/3;
     perspective: 1000px;
     cursor: pointer;
 }
@@ -113,7 +120,7 @@ h1 {
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: var(--shadow);
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .card.flipped .card-inner {
@@ -126,7 +133,7 @@ h1 {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -141,7 +148,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .card-front img,
@@ -158,58 +165,70 @@ h1 {
     right: 0;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 0.5rem;
+    padding: 0.3rem;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 /* Pantalla de Resultado */
 .result-stats {
-    margin: 2rem 0;
-    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-size: 1rem;
 }
 
 .discount-message {
     background-color: var(--card-background);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: var(--shadow);
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .code {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-color);
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .container {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
+        padding: 0.5rem;
     }
 
     .game-board {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.3rem;
+        padding: 0.3rem;
     }
 
-    .instructions {
-        font-size: 1rem;
+    .game-stats {
+        font-size: 0.8rem;
+        gap: 0.5rem;
+    }
+
+    .card-back h3 {
+        font-size: 0.7rem;
+        padding: 0.2rem;
     }
 }
 
 @media (max-width: 480px) {
     .game-board {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.2rem;
     }
 
     .game-stats {
-        flex-direction: column;
-        gap: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .card {
+        aspect-ratio: 2/3;
+    }
+
+    .card-back h3 {
+        font-size: 0.6rem;
     }
 } 
